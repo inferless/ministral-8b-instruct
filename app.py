@@ -22,7 +22,7 @@ class InferlessPythonModel:
         result = self.llm.generate(input_text, sampling_params)
         result_output = [output.outputs[0].text for output in result]
 
-        return {'result': result_output[0]}
+        return {'generated_text': result_output[0]}
 
     def finalize(self):
         self.llm = None
